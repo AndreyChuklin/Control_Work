@@ -9,11 +9,12 @@ namespace Decision
             // Задача: написать прогармму, которая из имеющегося массива срок формирует массив из строк, длина которых меньше либо равна 3 символа.
             // Первоначальный массив можно ввести с клавиатуры, либо задать на старте выполнения алгоритма.
 
-            string[] array1 = new string[7] { "567", "213", "hello", "world", "not", "mega", "prog" };
+            string[] array1 = new string[7] { "hello", "213", "567", "world", "not", "mega", "prog" };
             string[] array2 = new string[array1.Length];
-            int count = 0;
-            void SecondArrayWithIF(string[] array1, string[] array2)
+
+            void SecondArray(string[] array1, string[] array2)
             {
+                int count = 0;
                 for (int i = 0; i < array1.Length; i++)
                 {
                     if (array1[i].Length <= 3)
@@ -31,7 +32,7 @@ namespace Decision
                 }
                 Console.WriteLine();
             }
-            SecondArrayWithIF(array1, array2);
+            SecondArray(array1, array2);
             PrintArray(array2);
         }
     }
